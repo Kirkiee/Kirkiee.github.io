@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Web Design - S1 Technical</title>
+
+    <!--Used inline css for this page-->
+
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .resume-container {
+            background: white;
+            width: 700px;
+            padding: 20px;
+            border: 1px solid #000;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: left;
+            color: black;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid black;
+            padding-bottom: 10px;
+        }
+        .header img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border: 1px solid black;
+        }
+        h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+        h2 {
+            font-size: 18px;
+            margin-top: 20px;
+            text-decoration: underline;
+        }
+        p, ul {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 5px;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <div class="header">
+            <div>
+                <h1>Endozo, Justin Kirk O. </h1>
+                <p>Address: Mendoza Guazon St, 830 Paco, Manila, 1011 Metro Manila<br>
+                   Contact No.: +639955061569<br>
+                   Email: justinkirkendozo@gmail.com<br>
+                   Facebook: <a href="https://www.facebook.com/KirkEndozo">Kirk Endozo</a><br>
+                   Github: <a href="https://github.com/Kirkiee">Kirkiee</a>
+                </p>
+            </div>
+            <img src="assets/Profile Picture.png" alt="Profile Picture">
+        </div>
+
+        <h2>OBJECTIVE:</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+           Voluptas culpa maxime, accusamus odio sit nisi minus itaque delectus 
+           facilis eum architecto illum eaque repudiandae repellat molestiae id, ab ut esse!</p>
+
+        <h2>ACADEMIC BACKGROUNDS:</h2>
+        <p>High School: University of Rizal System (S.Y 2017 - 2021)<br></p>
+
+        <p>Senior High School: Adammson University (S.Y 2021 - 2023)<br>
+        STEM with specialiation in Engineering</p>
+
+        <p>College: FEU Institute of Technology (S.Y 2023 - Present)<br>
+            Undergraduate IT student specializing in Web and Mobile Application. </p>
+
+        <h2>SKILLS:</h2>
+        <ul>
+            <li>Web Development</li>
+            <li>Graphic Design</li>
+            <li>Project Management</li>
+        </ul>
+
+        <button onclick="changeColor()">Change Color</button>
+    </div>
+
+    <!--This script changes the background color, while also changing the text color, making sure that the text is still readable.-->
+
+    <script>
+        
+    function changeColor() {
+            
+            // Array of colors to cycle from.
+            const backgroundColors = ['#FF5733', '#33FF57', '#3357FF', '#FF33A8', '#33FFF5'];
+            const textColors = ['#FFFFFF', '#000000', '#F0E68C', '#FFFFFF', '#000000'];
+            const randomIndex = Math.floor(Math.random() * backgroundColors.length);
+
+            // Function to change the background color.
+            const resumeContainer = document.querySelector('.resume-container');
+            resumeContainer.style.backgroundColor = backgroundColors[randomIndex];
+            resumeContainer.style.color = textColors[randomIndex];
+        }
+    </script>
+</body>
+</html>
