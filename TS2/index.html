@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weekday Animation</title>
+    
+    <!--Used Inline CSS for the style.-->
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -51,6 +54,9 @@
         }
     </style>
 </head>
+
+<!--Section for the box color, and button color-->
+
 <body>
     <div class="buttons">
         <button onclick="animateBox('Monday')" style="background-color: purple; color: white;">Monday</button>
@@ -62,6 +68,9 @@
         <button onclick="animateBox('Sunday')" style="background-color: red; color: white;">Sunday</button>
     </div>
     <div id="animated-box"></div>
+
+<!--Script used for the animation of the boxes-->
+
     <script>
         let currentBox = null;
 
